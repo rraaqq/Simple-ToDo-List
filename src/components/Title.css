@@ -1,0 +1,13 @@
+
+h1 {
+    font-size: 40px;
+    display: inline;
+    margin: 10px;
+}
+
+p {
+    display: inline-block;
+    vertical-align: super;
+    font-size: 20px;
+    color: red;
+}
