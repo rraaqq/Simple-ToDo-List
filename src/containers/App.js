@@ -2,8 +2,10 @@
 import React from 'react';
 import Title from '../components/Title';
 import TodoList from '../components/TodoList';
+import TodoForm from '../components/TodoForm';
 import style from './App.css';
 import uuid from 'uuid';
+import { hot } from 'react-hot-loader';
 
 
 class App extends React.Component {
@@ -21,6 +23,7 @@ class App extends React.Component {
                     text: 'feed my cat'
                     }]
         };
+        this.addTodo = this.addTodo.bind(this);
         this.removeTodo = this.removeTodo.bind(this);
     }
     addTodo(val){
@@ -42,6 +45,9 @@ class App extends React.Component {
                     title="ToDo"
                     number={this.state.data.length}
                 />
+                <TodoForm 
+                    add={this.addTodo} 
+                />
                 <TodoList 
                     todos={this.state.data}
                     remove={this.removeTodo} 
@@ -51,4 +57,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default hot(module)(App);
