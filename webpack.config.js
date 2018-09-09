@@ -20,7 +20,7 @@ module.exports = (env) => {
 
     return {
         mode: environment,
-        entry: './src/containers/App.js',
+        entry: './src/index.js',
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: 'app.' + environment + '.bundle.js'
